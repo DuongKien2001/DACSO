@@ -814,8 +814,8 @@ if __name__ == '__main__':
     #save_unlabeled_images = False
 
     gpus = (0,1,2,3)[:args.gpus]
-    print(args.config_file)    
-    cfg.merge_from_file(args.config_file)
+    #print(args.config_file)    
+    #cfg.merge_from_file(args.config_file)
     #cfg.merge_from_list(args.opts)
     cfg.freeze()
 
