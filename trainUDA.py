@@ -676,13 +676,13 @@ def main():
             ema_model = update_ema_variables(ema_model = ema_model, model = model, alpha_teacher=alpha_teacher, iteration=i_iter)
 
         #print('iter = {0:6d}/{1:6d}, loss_l = {2:.3f}, loss_u = {3:.3f}'.format(i_iter, num_iterations, loss_l_value, loss_u_value))
-        """
+        
         if i_iter % save_checkpoint_every == 1486 and i_iter!=0:
             _save_checkpoint(i_iter, model, optimizer, config, ema_model, overwrite=False)
-            feat_estimator.save(name='prototype_feat_dist.pth')
-            out_estimator.save(name='prototype_out_dist.pth')
+            #feat_estimator.save(name='prototype_feat_dist.pth')
+            #out_estimator.save(name='prototype_out_dist.pth')
             print('save_prototype')
-        """
+        
         if i_iter == 31226:
             print(list_name)
         if config['utils']['tensorboard']:
