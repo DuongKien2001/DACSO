@@ -257,16 +257,16 @@ def evaluate(model, dataset, ignore_label=250, save_output_images=False, save_di
             output = np.asarray(np.argmax(output, axis=2), dtype=np.int32)
 
             data_list.append([gt.flatten(), output.flatten()])
-            
+            """
             if index < 500:  
-                """
+                
                 save_image(image[0].cpu(),index,'_input',palette.CityScpates_palette)
                 _, pred_u_s = torch.max(output1, dim=1)
                 #_, pred = torch.max(output1_o, dim=1)
                 save_image(pred_u_s[0].cpu(),index,'_pred',palette.CityScpates_palette)
                 #save_image(pred[0].cpu(),index,'_pred_o',palette.CityScpates_palette)
                 save_image(label[0].cpu(), index,'_label',palette.CityScpates_palette)
-                """
+                
                 ll = [1,0,13,14]
                 lf = [0,0,0,0]
                 for i in range(4):
@@ -294,7 +294,7 @@ def evaluate(model, dataset, ignore_label=250, save_output_images=False, save_di
                 plt.savefig('dacs/'+'a.png')
                 plt.figure().clear()
                 print('save success')
-                     
+            """      
             
         if (index+1) % 100 == 0:
             print('%d processed'%(index+1))
