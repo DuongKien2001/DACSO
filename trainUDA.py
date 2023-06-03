@@ -500,6 +500,7 @@ def main():
 
         src_pred, src_feat= model(images)
         pred = interp(src_pred)
+        print('a: ', (labels==255).sum())
         L_l = loss_calc(pred, labels) # Cross entropy loss for labeled data
         #L_l = torch.Tensor([0.0]).cuda()
 
